@@ -6,6 +6,11 @@ const PORT = process.env.PORT || 3000;
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Google route
+app.get('/google7ce8c2ac50a5f866.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'google7ce8c2ac50a5f866.html'));
+});
+
 // Home route (dashboard)
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
